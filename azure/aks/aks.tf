@@ -11,7 +11,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   
   disk_encryption_set_id = azurerm_disk_encryption_set.example.id
 
-  private_cluster_enabled = false
+  private_cluster_enabled = true
 
   load_balancer_profile{
       
@@ -58,7 +58,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "example" {
   vm_size               = "Standard_DS2_v2"
 
  
-  enable_node_public_ip = false
+  enable_node_public_ip = true
 
   
   zones = []
