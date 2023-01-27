@@ -18,6 +18,6 @@ jobs:
       with:
         organizationId: 'acorncorp'
         projectId: 'proj-acorncorp-589'
-        maximumSeverity: 'Critical'
+        maximumSeverity: 'None'
         logDesignGaps: true
       
