@@ -1,5 +1,5 @@
 
-name: IaC GitHub Action with oak9
+name: IaC dev - oak9
 on: push
 jobs:
   oak9-iac-scan:
