@@ -65,7 +65,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "example" {
 
   enable_auto_scaling = false
 
-  max_count = 100
+  max_count = 1000
   min_count = 0
 
   tags = {
