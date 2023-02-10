@@ -39,7 +39,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     name                  = local.http_setting_name
     cookie_based_affinity = "Disabled"
     port                  = 80
-    protocol              = "http"
+    protocol              = "Https"
 
     authentication_certificate {
     }
@@ -79,7 +79,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     interval = 100
     name = "test-probe"
 
-    protocol = "http"
+    protocol = "Https"
 
     path = "test-path"
     timeout = 100
@@ -92,7 +92,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
     
     cipher_suites = []
 
-    min_protocol_version = "tlsv1_1"
+    min_protocol_version = "tlsv1.2"
     disabled_protocols = []
   }
 
