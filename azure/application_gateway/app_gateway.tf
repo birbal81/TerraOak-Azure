@@ -89,6 +89,7 @@ resource "azurerm_application_gateway" "example_app_gateway" {
   # Policy type needs to be custom to check cipher_suites
   ssl_policy {
     policy_type = "Custom"
+    # oak9: Select either a predefined or custom SSL (TLS) policy type
     
     cipher_suites = []
 
