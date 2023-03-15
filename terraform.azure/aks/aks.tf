@@ -57,7 +57,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "aks_cluster_node_pool" {
   vm_size               = "Standard_DS2_v2"
   enable_node_public_ip = true
   zones = []
-  enable_auto_scaling = false
+  enable_auto_scaling = true
   max_count = 1000
   min_count = 100
 
