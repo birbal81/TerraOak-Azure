@@ -18,7 +18,7 @@ resource "azurerm_key_vault" "key_vault" {
 
   network_acls {
     bypass          = "None"
-    default_action  =  "allow"
+    default_action  = "deny"
   }
 
   access_policy {
@@ -26,8 +26,8 @@ resource "azurerm_key_vault" "key_vault" {
     object_id = data.azurerm_client_config.current.object_id
 
     azure_ad_user_principal_names       = ["foo1@example.com", "foo2@example.com"]
-    key_permissions                     = ["delete"]
-    secret_permissions                  = ["purge"]
+    key_permissions                     = "["Get"]"
+    secret_permissions                  = "["Get"]"
     certificate_permissions             = ["purge"]
   }
 }

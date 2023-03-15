@@ -14,7 +14,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   azure_policy_enabled              = false
   role_based_access_control_enabled = false
   private_cluster_enabled = false
-  local_account_disabled = false
+  local_account_disabled = true
 
   load_balancer_profile{
       idle_timeout_in_minutes = 10
@@ -55,7 +55,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "aks_cluster_node_pool" {
   name                  = "aks-demo-cluster-node-pool"
   kubernetes_cluster_id = azurerm_kubernetes_cluster.aks_cluster.id
   vm_size               = "Standard_DS2_v2"
-  enable_node_public_ip = true
+  enable_node_public_ip = false
   zones = []
   enable_auto_scaling = false
   max_count = 100
