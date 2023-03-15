@@ -58,7 +58,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "aks_cluster_node_pool" {
   enable_node_public_ip = true
   zones = []
   enable_auto_scaling = false
-  max_count = 100
+  max_count = 1000
   min_count = 100
 
   tags = {
