@@ -14,7 +14,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   azure_policy_enabled              = false
   role_based_access_control_enabled = false
   private_cluster_enabled = false
-  local_account_disabled = false
+  local_account_disabled = true
 
   load_balancer_profile{
       idle_timeout_in_minutes = 10
