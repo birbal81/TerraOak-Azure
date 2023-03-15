@@ -5,6 +5,6 @@ resource "azurerm_mssql_server" "mssql_database_server" {
   version = "12.0"  
   administrator_login = "admin-testing"  
   administrator_login_password = "$uPer$ecure$ecret!234"  
-  minimum_tls_version          = "1.1"
+  minimum_tls_version          = 1.2
   public_network_access_enabled = true
 }
