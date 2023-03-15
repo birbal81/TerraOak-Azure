@@ -27,7 +27,7 @@ resource "azurerm_key_vault" "key_vault" {
 
     azure_ad_user_principal_names       = ["foo1@example.com", "foo2@example.com"]
     key_permissions                     = ["delete"]
-    secret_permissions                  = ["purge"]
+    secret_permissions                  = "["Get"]"
     certificate_permissions             = ["purge"]
   }
 }
