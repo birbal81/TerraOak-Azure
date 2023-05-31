@@ -4,6 +4,7 @@ resource "azurerm_resource_group" "app_gateway_resource_group" {
 }
 
 resource "azurerm_application_gateway" "sac_application_gateway" {
+  # oak9: Azure App Gateway SSL (TLS) certificate should have its key managed through a key vault
   name                = "sac-application-gateway"
   resource_group_name = azurerm_resource_group.app_gateway_resource_group.name
   location            = azurerm_resource_group.app_gateway_resource_group.location

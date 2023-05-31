@@ -31,6 +31,7 @@ resource "azurerm_key_vault" "sac_key_vault" {
 }
 
 resource "azurerm_key_vault_key" "sac_key_vault_key" {
+  # oak9: Enable automated key rotation
   name              = "sac-key-vault-key"
   key_vault_id      = azurerm_key_vault.sac_key_vault.id
   key_type          = "EC"
