@@ -13,8 +13,8 @@ resource "azurerm_kubernetes_cluster" "sac_aks_cluster" {
     name       = "sacakspool"
     vm_size    = "Standard_D2_v2"
     node_count = 1
-    enable_auto_scaling = false
-    zones = []
+    enable_auto_scaling = true
+    zones = [] # oak9: default_node_pool.zones should be set to any of 1, 2, 3
   }
 
   local_account_disabled = false
